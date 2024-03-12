@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: acceptable-anglerfish-java-quarkus
+  janus-idp.io/tekton: acceptable-anglerfish-java-quarkus
+  backstage.io/kubernetes-id: acceptable-anglerfish-java-quarkus
+  backstage.io/kubernetes-namespace: oc-ci-e2e 
+  app.kubernetes.io/part-of: acceptable-anglerfish-java-quarkus
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
